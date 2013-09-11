@@ -1,7 +1,3 @@
-from flask  import Flask, jsonify, abort, make_response
+from flask  import Flask
 
-app = Flask(__name__)
-
-#Init the app
-if __name__ == '__main__':
-    app.run(debug=True)
+app   = Flask(__name__)
