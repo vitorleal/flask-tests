@@ -12,12 +12,3 @@ class HelloWorld(restful.Resource):
         return {'hello': 'world'}
 
 api.add_resource(HelloWorld, '/api')
-
-
-'''
-Error handler 404
-'''
-@app.errorhandler(404)
-def not_found(error):
-    print(error)
-    return make_response(jsonify( { 'error': 'Not found' } ), 404)
