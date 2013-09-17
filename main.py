@@ -1,6 +1,6 @@
-from app   import *
-from views import *
-from api   import *
+from first_ad       import *
+from first_ad.views import *
+from first_ad.api   import *
 
 
 #Init app

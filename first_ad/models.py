@@ -1,5 +1,5 @@
+from first_ad import db
 import datetime
-from app import db
 
 #Advertiser
 class Advertiser(db.Document):
@@ -8,8 +8,8 @@ class Advertiser(db.Document):
     last_name    = db.StringField(max_length=255, required=True)
     email        = db.EmailField(max_length=255, required=True, unique=True)
     cpf          = db.StringField(max_length=255, required=True, unique=True)
-    address      = db.StringField(max_length=255, required=True, unique=True)
-    country      = db.StringField(max_length=255, required=True, unique=True)
+    address      = db.StringField(max_length=255, required=True)
+    country      = db.StringField(max_length=255, required=True)
     created_at   = db.DateTimeField(default=datetime.datetime.now, required=True)
     last_sign_in = db.DateTimeField(default=datetime.datetime.now, required=True)
     password     = db.StringField(max_length=255, required=True)
