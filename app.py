@@ -3,7 +3,7 @@ from flask.ext.mongoengine import MongoEngine, MongoEngineSessionInterface
 from flask.ext.login import LoginManager
 
 #Create the Flask app
-app = Flask(__name__, static_folder='static', static_url_path='', template_folder='static/templates')
+app = Flask(__name__, static_folder='static', template_folder='templates')
 
 #Config
 app.config.from_object('config.Configuration')

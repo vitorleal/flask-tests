@@ -1,23 +1,36 @@
-from app import app
-from flask import make_response, jsonify
+from app    import app, login_manager
+from flask  import make_response, jsonify, render_template, redirect
+from flask.ext.login import login_user, logout_user, current_user, login_required
+
+from models import Advertiser
+
 '''
 Routes
 '''
 #Index
 @app.route("/")
 def home():
-    return "Hello World!"
+    return render_template('index.html')
 
+'''
+Authenticate
+'''
 #Login
-@app.route("/login")
+@login_manager.user_loader
+def load_user(userid):
+    return Advertiser.get(userid)
+
+
+@app.route("/login", methods=["GET", "POST"])
 def login():
-    return "Login"
+    form = LoginForm()
+    if form.validate_on_submit():
+        # login and validate the user...
+        login_user(user)
+        flash("Logged in successfully.")
+        return redirect(request.args.get("next") or url_for("index"))
 
-#Logout
-@app.route("/logout")
-def logout():
-    return "Logout"
-
+    return render_template("login.html", form=form)
 
 #Error
 @app.errorhandler(404)
