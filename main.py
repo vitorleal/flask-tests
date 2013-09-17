@@ -3,6 +3,6 @@ from views import *
 from api   import *
 
 
-#init app
+#Init app
 if __name__ == '__main__':
     app.run(debug=True)
