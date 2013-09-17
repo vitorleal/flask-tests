@@ -14,16 +14,16 @@ class LoginForm(Form):
 
     def validate(self):
         rv = Form.validate(self)
-        if not rv:
-            return False
 
-        advertiser = Advertiser.objects.filter(email=self.email.data).first()
+        advertiser = Advertiser.objects(email=self.email.data)
+
+        print(advertiser.password)
 
         if advertiser is None:
             self.email.errors.append('Unknown email')
             return False
 
-        if not advertiser.check_password(self.password.data):
+        if not advertiser.password == self.password.data:
             self.password.errors.append('Invalid password')
             return False
 
