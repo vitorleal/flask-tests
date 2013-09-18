@@ -6,12 +6,13 @@
     <p class="error"><strong>Error:</strong> {{ error }}</p>
   {% endif %}
   <form action="{{ url_for('login') }}" method="post">
+    {{ form.csrf_token }}
     <dl>
       <dt>Email:
       <dd><input type="email" name="email">
       <dt>Pass:
       <dd><input type="password" name="password">
-      <dd><input type="submit" value="Login">
+      <dd><input type="submit" value="login">
     </dl>
   </form>
 {% endblock %}

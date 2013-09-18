@@ -13,6 +13,7 @@ app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 
 #Login manager
 login_manager = LoginManager()
+login_manager.login_view = 'login'
 login_manager.init_app(app)
 
 #Connect to MongoLabs

@@ -17,6 +17,20 @@ class Advertiser(db.Document):
     def __unicode__(self):
         return self.email
 
+    """Wraps User object for Flask-Login"""
+    def get_id(self):
+        print(self)
+        return unicode(self.id)
+
+    def is_active(self):
+        return self.isActive
+
+    def is_anonymous(self):
+        return False
+
+    def is_authenticated(self):
+        return True
+
     meta = {
         'allow_inheritance': True,
         'indexes' : ['-created_at'],

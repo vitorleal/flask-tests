@@ -1,31 +1,22 @@
 from flask.ext.wtf      import Form
 from wtforms            import TextField, PasswordField
-from wtforms.validators import Required
+from wtforms.validators import Required, Email, EqualTo
 
 from models import Advertiser
 
 class LoginForm(Form):
-    email    = TextField('Email', [Required()])
+    email    = TextField('Email', [Required(), Email()])
     password = PasswordField('Password', [Required()])
 
-    def __init__(self, *args, **kwargs):
-        Form.__init__(self, *args, **kwargs)
-        self.user = None
 
-    def validate(self):
-        rv = Form.validate(self)
-
-        advertiser = Advertiser.objects(email=self.email.data)
-
-        print(advertiser.password)
-
-        if advertiser is None:
-            self.email.errors.append('Unknown email')
-            return False
-
-        if not advertiser.password == self.password.data:
-            self.password.errors.append('Invalid password')
-            return False
-
-        self.user = advertiser
-        return True
+class RegisterForm(Form):
+    name     = TextField('First',   [Required()])
+    last     = TextField('Last',    [Required()])
+    cpf      = TextField('Cpf',     [Required(), Email()])
+    address  = TextField('Address', [Required(), Email()])
+    email    = TextField('Email',   [Required(), Email()])
+    password = PasswordField('Password', [Required()])
+    confirm  = PasswordField('Repeat Password', [
+      Required(),
+      EqualTo('password', message='Passwords must match')
+    ])
