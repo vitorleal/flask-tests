@@ -10,13 +10,13 @@ class LoginForm(Form):
 
 
 class RegisterForm(Form):
-    name     = TextField('First',   [Required()])
-    last     = TextField('Last',    [Required()])
-    cpf      = TextField('Cpf',     [Required(), Email()])
-    address  = TextField('Address', [Required(), Email()])
-    email    = TextField('Email',   [Required(), Email()])
+    first    = TextField('First',        [Required()])
+    last     = TextField('Last',         [Required()])
+    cpf      = TextField('Cpf',          [Required()])
+    address  = TextField('Address',      [Required()])
+    email    = TextField('Email',        [Required(), Email()])
     password = PasswordField('Password', [Required()])
-    confirm  = PasswordField('Repeat Password', [
+    repeat   = PasswordField('Repeat', [
       Required(),
       EqualTo('password', message='Passwords must match')
     ])

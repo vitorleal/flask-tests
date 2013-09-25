@@ -3,10 +3,10 @@ import datetime
 
 #Advertiser
 class Advertiser(db.Document):
-    isActive     = db.BooleanField(default=True, required=True)
+    isActive     = db.BooleanField(default=True,  required=True)
     first_name   = db.StringField(max_length=255, required=True)
     last_name    = db.StringField(max_length=255, required=True)
-    email        = db.EmailField(max_length=255, required=True, unique=True)
+    email        = db.EmailField(max_length=255,  required=True, unique=True)
     cpf          = db.StringField(max_length=255, required=True, unique=True)
     address      = db.StringField(max_length=255, required=True)
     country      = db.StringField(max_length=255, required=True)
@@ -19,7 +19,6 @@ class Advertiser(db.Document):
 
     """Wraps User object for Flask-Login"""
     def get_id(self):
-        print(self)
         return unicode(self.id)
 
     def is_active(self):

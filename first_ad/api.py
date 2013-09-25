@@ -1,9 +1,8 @@
 from first_ad  import app, db
-from flask     import jsonify
 from flask.ext import restful
 from models    import Advertiser
 from flask.ext.login import current_user, login_required
-
+import json
 
 #Create the Rest api App
 api = restful.Api(app)
@@ -11,20 +10,12 @@ api = restful.Api(app)
 '''
 Rest api
 '''
-
 #Users
-class AllUsers(restful.Resource):
+class CurentUser(restful.Resource):
     def get(self):
-        user = Advertiser.objects(email='vitorleal1@gmail.com').first()
-        return { "a": "b" }
+        if current_user.is_anonymous():
+            return { 'error': 'no_user' }
+        else:
+            return json.loads(current_user.to_json())
 
-api.add_resource(AllUsers, '/api/users')
-
-
-#Ads
-class MyAds(restful.Resource):
-    def get(self):
-        return { 'ads': 'ok' }
-
-api.add_resource(MyAds, '/api/ads')
-
+api.add_resource(CurentUser, '/api/user')
