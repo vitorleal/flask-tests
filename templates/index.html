@@ -13,6 +13,7 @@ ng-app
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
+      <img class="pull-left" src="{{ user.email | gravatar }}">
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.email }} <b class="caret"></b></a>
         <ul class="dropdown-menu">
