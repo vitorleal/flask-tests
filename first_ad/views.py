@@ -25,11 +25,15 @@ def login():
 
     if form.validate_on_submit():
         user = Advertiser.objects(email=form.email.data).first()
-        login_user(user)
 
-        flash('Logged in successfully.')
+        print(user.password)
+        print(form.password.data)
+        if user.password != form.password.data:
+          return render_template('login.html', form=form, error="Usuario ou Senha incorreta")
 
-        return redirect(url_for('index'))
+        else:
+          login_user(user)
+          return redirect(url_for('index'))
 
     return render_template('login.html', form=form)
 
@@ -41,7 +45,7 @@ login_url('/login')
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    return redirect(url_for('login'))
 
 
 '''
@@ -72,8 +76,6 @@ def signup():
             email      = form.email.data,
             password   = form.password.data,
         ).save()
-
-        flash('Success')
 
         return redirect(url_for('index'))
 

@@ -1,18 +1,19 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-  <h2>Login</h2>
   {% if error %}
-    <p class="error"><strong>Error:</strong> {{ error }}</p>
+    <div class="alert alert-danger container text-center mt">{{ error }}</div>
   {% endif %}
-  <form action="{{ url_for('login') }}" method="post">
+
+  <h2 class="form-signin-heading text-center">Login</h2>
+  <form action="{{ url_for('login') }}" method="post" class="form-signin">
     {{ form.csrf_token }}
-    <dl>
-      <dt>Email:
-      <dd><input type="email" name="email">
-      <dt>Password:
-      <dd><input type="password" name="password">
-      <dd><input type="submit" value="login">
-    </dl>
+      <label class="sr-only">Email:</label>
+      <input class="form-control" type="email" name="email">
+
+      <label class="sr-only">Password:</label>
+      <input class="form-control" type="password" name="password">
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
   </form>
-{% endblock %}
+  {% endblock %}
