@@ -1,20 +1,11 @@
 {% extends 'layout.html' %}
 
 {% block header %}
-  <nav class="navbar-inverse navbar-fixed-top navbar" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand logo" href="#">FirstAD</a>
-      </div>
-
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Login</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Login</a></li>
+    </ul>
+  </div>
 {% endblock %}
 
 {% block body %}
@@ -30,6 +21,6 @@
       <label class="sr-only">Password:</label>
       <input class="form-control" type="password" name="password">
 
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      <button class="btn btn-lg btn-success btn-block" type="submit">Login</button>
   </form>
 {% endblock %}

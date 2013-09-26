@@ -5,34 +5,21 @@ ng-app
 {% endblock %}
 
 {% block header %}
-  <nav class="navbar-inverse navbar-fixed-top navbar" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand logo" href="#">FirstAD</a>
-      </div>
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a ng-href="/">Dashboard</a></li>
+      <li><a ng-href="/ads">Meus Ads</a></li>
+      <li><a ng-href="/novo/ad">Novo Ad</a></li>
+    </ul>
 
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Dashboard</a></li>
-          <li><a href="#">New Ad</a></li>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.email }} <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a ng-href="/perfil">Editar perfil</a></li>
+          <li><a href="/logout">Logout</a></li>
         </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.email }} <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Editar perfil</a></li>
-              <li><a href="/logout">Logout</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+      </li>
+    </ul>
+  </div>
 {% endblock %}

@@ -20,7 +20,15 @@
       <div class="alert alert-info container mt text-center">{{ message }}</div>
     {% endfor %}
 
-    {% block header %}{% endblock %}
+    <nav class="navbar-inverse navbar-fixed-top navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand logo" ng-href="/">FirstAD</a>
+        </div>
+
+        {% block header %}{% endblock %}
+      </div>
+    </nav>
 
     <section class="container" ng-view>
       {% block body %}{% endblock %}
