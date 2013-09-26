@@ -18,7 +18,7 @@ login_manager.login_view = 'login'
 login_manager.init_app(app)
 
 #gravatar
-gravatar = Gravatar(app, size=50, rating='g',
+gravatar = Gravatar(app, size=40, rating='g',
                     default='retro', force_default=False,
                     use_ssl=False, base_url=None,
                   )

@@ -62,6 +62,10 @@
   text-shadow: 2px -2px 1px #463243, -1px 2px 1px rgba(255, 255, 255, .3);
 }
 
+
+.user-avatar {
+  margin: 5px 0;
+}
 /* NavBar */
 .navbar-inverse {
   background-color: #563d7c;
