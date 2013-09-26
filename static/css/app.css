@@ -77,6 +77,18 @@
   background-color: #463265;
 }
 
+.navbar-inverse .navbar-nav > .active > a:hover {
+  background-color: #302246;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown .dropdown-menu a {
+  color: #463265 !important;
+}
+
 .btn-config {
   color: #fff;
   font-size: 2.2em;

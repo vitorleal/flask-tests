@@ -1,11 +1,27 @@
 {% extends 'layout.html' %}
 
+{% block header %}
+  <nav class="navbar-inverse navbar-fixed-top navbar" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand logo" href="#">FirstAD</a>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+{% endblock %}
+
 {% block body %}
   {% if error %}
     <div class="alert alert-danger container text-center mt">{{ error }}</div>
   {% endif %}
 
-  <h2 class="form-signin-heading text-center">Login</h2>
   <form action="{{ url_for('login') }}" method="post" class="form-signin">
     {{ form.csrf_token }}
       <label class="sr-only">Email:</label>
@@ -16,4 +32,4 @@
 
       <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
   </form>
-  {% endblock %}
+{% endblock %}
