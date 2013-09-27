@@ -1,28 +1,43 @@
 {% extends 'layout.html' %}
 
 {% block angular %}
-ng-app
+ng-app="firstAD"
 {% endblock %}
 
 {% block header %}
   <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav">
-      <li class="active"><a ng-href="/">Dashboard</a></li>
-      <li><a ng-href="/ads">Meus Ads</a></li>
-      <li><a ng-href="/novo/ad">Novo Ad</a></li>
+    <ul class="nav navbar-nav" active-menu="">
+      <li>
+        <a ng-href="#/">
+          <span class="glyphicon glyphicon-dashboard"></span> Dashboard</a>
+        </li>
+      <li>
+        <a ng-href="#/my-ads">
+          <span class="glyphicon glyphicon-list"></span> Meus Ads
+        </a>
+      </li>
+      <li>
+        <a ng-href="#/new-ad">
+          <span class="glyphicon glyphicon-plus-sign"></span> Novo Ad
+        </a>
+      </li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
-      <a class="pull-left" ng-href="/perfil">
+      <a class="pull-left" ng-href="#/profile">
         <img class="user-avatar img-circle" src="{{ user.email | gravatar }}">
       </a>
       <li class="dropdown">
-        <a ng-href="/perfil" class="dropdown-toggle" data-toggle="dropdown">{{ user.email }} <b class="caret"></b></a>
+        <a ng-href="#/profile" class="dropdown-toggle" data-toggle="dropdown">{{ user.email }} <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a ng-href="/perfil">Seu perfil</a></li>
-          <li><a href="/logout">Logout</a></li>
+          <li><a ng-href="#/profile"><span class="glyphicon glyphicon-user"></span> Seu perfil</a></li>
+          <li><a href="/logout"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
         </ul>
       </li>
     </ul>
   </div>
+{% endblock %}
+
+{% block extrajs %}
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 {% endblock %}

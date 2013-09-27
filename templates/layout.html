@@ -7,9 +7,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <title>FirstAD</title>
+    <title>firstAD</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Lobster' rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
     <script src="{{ url_for('static', filename='bower_components/angular/angular.min.js') }}"></script>
@@ -23,7 +23,7 @@
     <nav class="navbar-inverse navbar-fixed-top navbar" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand logo" ng-href="/">FirstAD</a>
+          <a class="navbar-brand logo" ng-href="#/">firstAD</a>
         </div>
 
         {% block header %}{% endblock %}
@@ -33,5 +33,8 @@
     <section class="container" ng-view>
       {% block body %}{% endblock %}
     </section>
+
+    {% block extrajs %}
+    {% endblock %}
   </body>
 </html>

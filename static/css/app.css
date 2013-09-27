@@ -1,28 +1,13 @@
+/* SignIn form */
 .form-signin {
+  max-width: 330px;
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
 }
-
-.form-control {
-  display: block;
-  width: 100%;
-  height: 34px;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.428571429;
-  color: #555;
-  vertical-align: middle;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+.form-signin .form-signin-heading {
+  margin-bottom: 10px;
 }
-
 .form-signin .form-control {
   position: relative;
   font-size: 16px;
@@ -32,40 +17,33 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-.form-signin .form-signin-heading {
-  margin-bottom: 10px;
+.form-signin .form-control:focus {
+  z-index: 2;
 }
-
-.form-signin input[type="text"] {
+.form-signin input[type="email"] {
   margin-bottom: -1px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-
 .form-signin input[type="password"] {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
+/* Helpers */
 .mt {
   margin-top: 40px;
 }
 
-
-
 .logo {
-  font-family: 'Lobster', cursive;
+  font-family: 'Raleway';
+  font-weight: bold;
   font-size: 2.3em;
   margin: 0 40px 0 0;
-  text-shadow: 2px -2px 1px #463243, -1px 2px 1px rgba(255, 255, 255, .3);
+  text-shadow: 0 -2px 1px #302246;
 }
 
-
-.user-avatar {
-  margin: 5px 0;
-}
 /* NavBar */
 .navbar-inverse {
   background-color: #563d7c;
@@ -73,7 +51,7 @@
 }
 
 .navbar-inverse .navbar-brand,
-.navbar.navbar-inverse a {
+.navbar-inverse .navbar-nav > li > a {
   color: #fff !important;
 }
 
@@ -85,12 +63,16 @@
   background-color: #302246;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
+.navbar-nav .glyphicon {
+  margin-right: 5px;
 }
 
-.dropdown .dropdown-menu a {
-  color: #463265 !important;
+.user-avatar {
+  margin: 5px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .btn-config {
