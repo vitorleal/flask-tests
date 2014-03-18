@@ -2,7 +2,7 @@
 Simple app testing [Flask](http://flask.pocoo.org/) with [AngularJS](http://angularjs.org/) and [MongoLabs](https://mongolab.com/welcome/)
 
 ##Config
-Update the [config](https://github.com/vitorleal/flask-tests/blob/master/first_ad/config.py) file with the correct mongolabs database info:
+Update the [config](https://github.com/vitorleal/flask-tests/blob/master/flask_app/config.py) file with the correct mongolabs database info:
 - userame
 - password
 - database url
@@ -26,4 +26,9 @@ source ENV/bin/activate
 Instll the project dependencies usin [pip](http://www.pip-installer.org/en/latest/)
 ```
 pip install -r requirements.txt
+```
+
+Then run the server
+```
+python main.py
 ```
