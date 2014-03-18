@@ -7,7 +7,7 @@ from flask.ext.gravatar import Gravatar
 app = Flask(__name__, static_folder='../static', template_folder='../templates')
 
 #Config
-app.config.from_object('first_ad.config.Configuration')
+app.config.from_object('flask_app.config.Configuration')
 
 #secret key
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'

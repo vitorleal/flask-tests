@@ -1,6 +1,6 @@
 'use static';
 
-var app = angular.module('flaskApp', []);
+var app = angular.module('flaskApp', ['ngRoute']);
 
 //Config
 app.config(function ($routeProvider) {

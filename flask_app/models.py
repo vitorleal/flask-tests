@@ -1,4 +1,4 @@
-from first_ad import db
+from flask_app import db
 import datetime
 
 #Advertiser

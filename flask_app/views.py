@@ -1,4 +1,4 @@
-from first_ad        import app, login_manager
+from flask_app        import app, login_manager
 from flask           import make_response, jsonify, render_template, redirect, url_for, flash, request
 from flask.ext.login import login_url, login_user, logout_user, current_user, login_required
 

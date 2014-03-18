@@ -1,4 +1,4 @@
-from first_ad  import app, db
+from flask_app  import app, db
 from flask.ext import restful
 from models    import Advertiser
 from flask.ext.login import current_user, login_required
