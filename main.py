@@ -1,6 +1,6 @@
-from first_ad       import *
-from first_ad.views import *
-from first_ad.api   import *
+from flask_app       import *
+from flask_app.views import *
+from flask_app.api   import *
 
 
 #Init app
