@@ -29,7 +29,7 @@ def login():
         print(user.password)
         print(form.password.data)
         if user.password != form.password.data:
-          return render_template('login.html', form=form, error="Usuario ou Senha incorreta")
+          return render_template('login.html', form=form, error="Wrong username or password")
 
         else:
           login_user(user)
