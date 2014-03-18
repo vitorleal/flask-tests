@@ -7,11 +7,11 @@ Update the [config](https://github.com/vitorleal/flask-tests/blob/master/flask_a
 #Config
 class Configuration(object):
     MONGODB_SETTINGS = {
-        'DB'      : <db-name>,
-        'HOST'    : <mongolabs-url>,
+        'DB'      : '<db-name>',
+        'HOST'    : '<mongolabs-url>',
         'PORT'    : 43338,
-        'USERNAME': <username>,
-        'PASSWORD': <password>,
+        'USERNAME': '<username>',
+        'PASSWORD': '<password>',
     }
 
 ```
