@@ -1,7 +1,7 @@
 #Config
 class Configuration(object):
     MONGODB_SETTINGS = {
-        'DB'      : 'firstad',
+        'DB'      : <db-name>,
         'HOST'    : <mongolabs-url>,
         'PORT'    : 43338,
         'USERNAME': <username>,
