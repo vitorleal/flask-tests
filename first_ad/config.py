@@ -2,9 +2,9 @@
 class Configuration(object):
     MONGODB_SETTINGS = {
         'DB'      : 'firstad',
-        'HOST'    : 'ds043338.mongolab.com',
+        'HOST'    : <mongolabs-url>,
         'PORT'    : 43338,
-        'USERNAME': 'firstad',
-        'PASSWORD': '1234',
+        'USERNAME': <username>,
+        'PASSWORD': <password>,
     }
     DEBUG = True
