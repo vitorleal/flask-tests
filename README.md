@@ -1,4 +1,4 @@
-#Flask, AngularJS and MongoLabs test app
+#Flask, AngularJS and MongoLabs tests
 Simple app testing [Flask](http://flask.pocoo.org/) with [AngularJS](http://angularjs.org/) and [MongoLabs](https://mongolab.com/welcome/)
 
 ##Config
