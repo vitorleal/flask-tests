@@ -1,7 +1,7 @@
 {
-  "name": "first_ad",
+  "name": "flask-app",
   "version": "0.0.1",
-  "homepage": "https://github.com/vitorleal/firstad",
+  "homepage": "https://github.com/vitorleal/flask-tests",
   "authors": [
     "Vitor Leal <vitorleal1@gmail.com>"
   ],

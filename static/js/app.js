@@ -1,6 +1,6 @@
 'use static';
 
-var app = angular.module('firstAD', []);
+var app = angular.module('flaskApp', []);
 
 //Config
 app.config(function ($routeProvider) {
