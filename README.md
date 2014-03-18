@@ -9,25 +9,29 @@ Update the [config](https://github.com/vitorleal/flask-tests/blob/master/flask_a
 - database name
 
 ##Install dependencies
-Install the [Bower](http://bower.io/)
+Install [Bower](http://bower.io/) dependencies [Bootstrap, angular, angular-route]
 ```
 bower install
 ```
 
+
+###Init a virtualenv
 Init a [Virtualenv](http://www.virtualenv.org/) enviroment
 ```
 virtualenv ENV
 ```
-then activate the enviroment
+Then activate the enviroment
 ```
 source ENV/bin/activate
 ```
 
+###Install pip dependencies
 Instll the project dependencies usin [pip](http://www.pip-installer.org/en/latest/)
 ```
 pip install -r requirements.txt
 ```
 
+###Run the server
 Then run the server
 ```
 python main.py
