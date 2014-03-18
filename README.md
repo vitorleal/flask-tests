@@ -24,33 +24,33 @@ class Configuration(object):
 ##Install dependencies
 Install [Bower](http://bower.io/) dependencies [Bootstrap, angular, angular-route]
 ```
-bower install
+$ bower install
 ```
 
 
 ###Init a virtualenv
 Init a [Virtualenv](http://www.virtualenv.org/) enviroment
 ```
-virtualenv ENV
+$ virtualenv ENV
 ```
 Then activate the enviroment
 ```
-source ENV/bin/activate
+$ source ENV/bin/activate
 ```
 
 ###Install pip dependencies
 Instll the project dependencies usin [pip](http://www.pip-installer.org/en/latest/)
 ```
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 ###Run the server
 Then run the server
 ```
-python main.py
+$ python main.py
 ```
 
-##License (Unlicense)
+##License ([Unlicense](http://unlicense.org))
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
